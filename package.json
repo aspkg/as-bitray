@@ -1,6 +1,6 @@
 {
   "name": "as-bitray",
-  "version": "2.5.0",
+  "version": "2.5.1",
   "description": "Bitray - Small Utility For Handling Binary Data Written In AssemblyScript",
   "types": "./assembly/index.ts",
   "ascMain": "./assembly/index.ts",
@@ -28,5 +28,8 @@
     "Data"
   ],
   "author": "JairusSW",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.18.27"
+  }
 }

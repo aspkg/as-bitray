@@ -92,15 +92,35 @@ export class Bitray extends Uint8Array {
 
   }
 
-}
+  static from<T>(array: T): Bitray {
 
-export function from (array: Uint8Array) {
+    if (array instanceof Uint8Array) {
 
-  const bit = new Bitray('', '')
-
-  bit.binary = array
+      const bit = new Bitray('', '')
   
-  return bit
+      bit.binary = array
+      
+      return bit
+      
+    } else if (array instanceof ArrayBuffer) {
+
+      const bit = new Bitray('', '')
+  
+      bit.binary = Uint8Array.wrap(array)
+      
+      return bit
+
+    } else {
+
+      const bit = new Bitray('', '')
+  
+      bit.binary = changetype<Uint8Array>(array)
+      
+      return bit
+      
+    }
+  
+  }
 
 }
 

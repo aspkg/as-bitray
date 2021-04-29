@@ -27,9 +27,9 @@ bit.toFormat('hex')
 **ArrayLike to Bitray**
 
 ```js
-import { Bitray, from } from 'as-bitray'
+import { Bitray } from 'as-bitray'
 
-const bit = from([152, 83, 34, 125])
+const bit = Bitray.from([152, 83, 34, 125])
 //=> Bitray
 
 bit.toFormat('hex')
